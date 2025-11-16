@@ -1,0 +1,5 @@
+$query = mysqli_query($koneksi, "INSERT INTO alumni 
+    (nama, nik, nisn, tempat_lahir, tanggal_lahir, alamat, jurusan, tahun_lulus)
+    VALUES (
+        '$nama', '$nik', '$nisn', '$tempat_lahir', '$tanggal_lahir', '$alamat', '$jurusan', '$tahun_lulus'
+    )");
