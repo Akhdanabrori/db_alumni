@@ -1,0 +1,27 @@
+$id             = $_POST['id'];
+$nama           = $_POST['nama'];
+$nik            = $_POST['nik'];
+$nisn           = $_POST['nisn'];
+$tempat_lahir   = $_POST['tempat_lahir'];
+$tanggal_lahir  = $_POST['tanggal_lahir'];
+$alamat         = $_POST['alamat'];
+$jurusan        = $_POST['jurusan'];
+$tahun_lulus    = $_POST['tahun_lulus'];
+
+$query = mysqli_query($koneksi, "UPDATE alumni SET
+    nama            = '$nama',
+    nik             = '$nik',
+    nisn            = '$nisn',
+    tempat_lahir    = '$tempat_lahir',
+    tanggal_lahir   = '$tanggal_lahir',
+    alamat          = '$alamat',
+    jurusan         = '$jurusan',
+    tahun_lulus     = '$tahun_lulus'
+    WHERE id        = '$id'
+");
+
+if ($query) {
+    echo "<script>alert('Data berhasil diupdate');window.location='index.php';</script>";
+} else {
+    echo "Gagal update: " . mysqli_error($koneksi);
+}
