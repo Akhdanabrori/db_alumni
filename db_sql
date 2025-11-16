@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS db_alumni;
+USE db_alumni;
+
+CREATE TABLE alumni (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    nik VARCHAR(20) NOT NULL,
+    nisn VARCHAR(20) NOT NULL,
+    tempat_lahir VARCHAR(50),
+    tanggal_lahir DATE,
+    alamat TEXT,
+    jurusan VARCHAR(50),
+    tahun_lulus YEAR
+);
